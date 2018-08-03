@@ -10,6 +10,14 @@ experimenting with various machine learning applications.
 
 ### Usage
 
+####  Examples
+
+* My Favorite: `docker run -d -p 8888:8888 -p 6006:6006 -v ./notebooks:/home/jupyter/notebooks -v ./tensorlogs:/home/jupyter/tensorlogs buffersandbeer/machinelearning-cpu-dev:latest`
+  * Run container, expose both Jupyter and Tensorboard, mount local directories for persistence
+* Simpler: `docker run -d -p 8888:8888 -p 6006:6006 buffersandbeer/machinelearning-cpu-dev:latest`
+  * Doesn't mount volumes, but exposes what it needs to
+  * Good for just experimenting when you don't need persistence
+
 #### Environment Variables
 
 * `JUPYTER_PASSWORD` - The password required to log in to Jupyter
